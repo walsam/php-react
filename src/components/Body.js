@@ -1,11 +1,13 @@
 import React from 'react';
 import CardBook from "./Card";
 import { Container, Button} from 'react-bootstrap';
+import SearchBar from "./Search";
 
 
 const Body = () => {
     return (
         <body>
+        <SearchBar/>
         <Container fluid>
             <Button variant="primary" size="sm">Add Book</Button>{' '}
             <hr></hr>

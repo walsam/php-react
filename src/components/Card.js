@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import * as rbs from 'react-bootstrap';
 import {Card} from "react-bootstrap";
 
 const CardBook = (props) => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CardBook from "./Card";
-import { Container, Button} from 'react-bootstrap';
+import {Container, Button, Col} from 'react-bootstrap';
 import SearchBar from "./Search";
 
 
@@ -15,7 +15,7 @@ const Body = ({books, onSearch}) => {
             <hr></hr>
             <Container style={styles.containerFlex} >
                 {
-                    books.map((book, key) => <CardBook key={book.id} book={book}/>)
+                    books.map((book) => <CardBook  key={book.isbn} book={book}/>)
                 }
             </Container>
         </Container>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Card} from "react-bootstrap";
 
+
 const CardBook = (props) => {
         return (
             <Card style = {styles.Card}>
@@ -8,7 +9,7 @@ const CardBook = (props) => {
                 </Card.Header>
                 <Card.Body>
                     <Card.Text>
-                        {props.book.description}
+                        {props.book.summary}
                     </Card.Text>
                 </Card.Body>
             </Card>

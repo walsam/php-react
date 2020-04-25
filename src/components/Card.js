@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import {Card} from "react-bootstrap";
 
 
-const CardBook = (props) => {
+const CardBook = ({book}) => {
         return (
             <Card style = {styles.Card}>
-                <Card.Header style ={styles.CardHeader}><a href="{#}">{props.book.title}</a>
+                <Card.Header style ={styles.CardHeader}>
+                    <a href={'/books/'+ book.isbn}>{book.title}</a>
                 </Card.Header>
                 <Card.Body>
                     <Card.Text>
-                        {props.book.summary}
+                        {book.summary}
                     </Card.Text>
                 </Card.Body>
             </Card>

@@ -8,6 +8,9 @@ class BookService {
     findBooksByTitle(title) {
         return axios.get(`/books?title=${title}`);
     }
+    findBookByIsbn(isbn) {
+        return axios.get(`/books?isbn=${isbn}`);
+    }
 }
 
 export const bookService = new BookService();

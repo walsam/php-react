@@ -57,7 +57,7 @@ function App() {
                   <Col>
                       <Container>
                           <Switch>
-                              <Route path="/books/:id">
+                              <Route path="/books/:isbn">
                                   <BookDetailsView />
                               </Route>
                               <Route path="/">

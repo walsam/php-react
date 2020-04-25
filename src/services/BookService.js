@@ -11,6 +11,11 @@ class BookService {
     findBookByIsbn(isbn) {
         return axios.get(`/books?isbn=${isbn}`);
     }
+    save(book) {
+        book.isbn = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        return axios.post('/books', book);
+    }
+
 }
 
 export const bookService = new BookService();

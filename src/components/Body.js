@@ -11,7 +11,7 @@ const Body = ({books, onSearch}) => {
         <body>
         <SearchBar onSearching={onSearch}/>
         <Container fluid>
-            <Button variant="primary" size="sm">Add Book</Button>{' '}
+            <a href="/books/new"><Button variant="primary" size="sm">Add Book</Button></a>{' '}
             <hr></hr>
             <Container style={styles.containerFlex} >
                 {

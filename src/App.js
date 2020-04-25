@@ -11,6 +11,8 @@ import {
     Link
 } from "react-router-dom";
 import BookDetailsView from './views/BookDetailsView';
+import CreateBookView from './views/CreateBookView';
+
 
 
 function App() {
@@ -57,6 +59,9 @@ function App() {
                   <Col>
                       <Container>
                           <Switch>
+                              <Route path="/books/new">
+                                  <CreateBookView />
+                              </Route>
                               <Route path="/books/:isbn">
                                   <BookDetailsView />
                               </Route>

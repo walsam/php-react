@@ -19,8 +19,8 @@ class BookService {
         return axios.post('/books', book);
     }
 
-    updateBook(updatedBook) {
-        return axios.put('/books/${UpdatedBook.isbn}', updatedBook)
+    update(book){
+        return axios.put(`/books/${book.id}`, book);
     }
 }
 

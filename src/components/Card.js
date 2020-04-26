@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Card} from "react-bootstrap";
+import {Button, Card, Container} from "react-bootstrap";
 
 
 const CardBook = ({book}) => {
@@ -12,6 +12,7 @@ const CardBook = ({book}) => {
                     <Card.Text>
                         {book.summary}
                     </Card.Text>
+                    <a href={'/books/edit/'+ book.id}><Button variant="dark" style={{float:'right', marginBottom:'20px'}}>Edit</Button></a>{' '}
                 </Card.Body>
             </Card>
         );

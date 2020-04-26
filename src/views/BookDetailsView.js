@@ -7,12 +7,12 @@ import {Card, Button, Container} from 'react-bootstrap';
 import { bookService } from '../services/BookService';
 
 const BookDetailsView = () => {
-    let {isbn} = useParams();
+    let {id} = useParams();
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
         const findBook = () => {
-            bookService.findBookByIsbn(isbn)
+            bookService.findBookByID(id)
                 .then(function(response){
                     setBooks(response.data);
                 });
@@ -24,7 +24,7 @@ const BookDetailsView = () => {
         <div className="col">
             {books.map(book =>
                 <Container style={{marginTop: '20px'}}>
-                    <Button variant="dark" style={{float:'right', marginBottom:'20px'}}>Edit</Button>{' '}
+                    <a href={'/books/edit/'+ book.id}><Button variant="dark" style={{float:'right', marginBottom:'20px'}}>Edit</Button></a>{' '}
                     <Card border="dark" style={{ width: '70rem'}}>
                         <Card.Body>
                             <Card.Title><b>{book.title}</b>( {book.publisher}{book.publicationDate} )</Card.Title>

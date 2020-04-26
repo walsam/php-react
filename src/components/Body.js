@@ -15,7 +15,7 @@ const Body = ({books, onSearch}) => {
             <hr></hr>
             <Container style={styles.containerFlex} >
                 {
-                    books.map((book) => <CardBook  key={book.isbn} book={book}/>)
+                    books.map((book) => <CardBook  key={book.id} book={book}/>)
                 }
             </Container>
         </Container>

@@ -6,7 +6,7 @@ const CardBook = ({book}) => {
         return (
             <Card style = {styles.Card}>
                 <Card.Header style ={styles.CardHeader}>
-                    <a href={'/books/'+ book.isbn}>{book.title}</a>
+                    <a href={'/books/'+ book.id}>{book.title}</a>
                 </Card.Header>
                 <Card.Body>
                     <Card.Text>

@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import BookDetailsView from './views/BookDetailsView';
 import CreateBookView from './views/CreateBookView';
+import EditBookView from "./views/EditBookView";
 
 
 
@@ -62,7 +63,10 @@ function App() {
                               <Route path="/books/new">
                                   <CreateBookView />
                               </Route>
-                              <Route path="/books/:isbn">
+                              <Route path="/books/edit/:id">
+                                  <EditBookView />
+                              </Route>
+                              <Route path="/books/:id">
                                   <BookDetailsView />
                               </Route>
                               <Route path="/">
